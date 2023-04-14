@@ -1,0 +1,25 @@
+#root {
+  width: 110%;
+  /* margin: 0 auto; */
+  /* padding: 2rem; */
+  text-align: center;
+}
+
+.navbar{
+  width: 110%;
+  position: relative;
+  text-align: center;
+  background: #e3f2fd;
+  color: white;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+
+.search {
+  width: 350px !important;
+  border-radius: 15px !important;
+
+}
+
+
