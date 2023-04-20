@@ -3,6 +3,7 @@
   /* margin: 0 auto; */
   /* padding: 2rem; */
   text-align: center;
+  background-color: rgb(238, 244, 244);
 }
 
 .navbar{
@@ -21,5 +22,54 @@
   border-radius: 15px !important;
 
 }
+
+.btn{
+  width: 150px;
+}
+
+.card {
+  display: flex;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  align-items: flex-start;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  
+}
+.postImage {
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 20px;
+
+}
+.actionUpvote{
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  align-content: space-between;
+  
+}
+.upVote {
+  display: flex;
+  flex-direction: row; 
+}
+.action {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.trash:hover {
+  color: red;
+  cursor: pointer;
+
+}
+
+
 
 
