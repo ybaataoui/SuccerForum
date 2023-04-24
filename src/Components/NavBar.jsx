@@ -5,11 +5,11 @@ const NavBar = () => {
     return (
         <nav className="navbar header">
             <div className="container-fluid">
-                <a className="">Succer Forum</a>
+                <a className="" style={{ color: 'inherit', textDecoration: 'inherit'}}>Succer Forum</a>
                 
                 <div>
-                    <Link to="/"> Home </Link>&nbsp;&nbsp;
-                    <Link to="/new"> Create New Post </Link>
+                    <Link to="/" style={{ color: 'inherit', textDecoration: 'inherit'}}> Home </Link>&nbsp;&nbsp;
+                    <Link to="/new" style={{ color: 'inherit', textDecoration: 'inherit'}}> Create New Post </Link>
                 </div>
             </div>
         </nav>     

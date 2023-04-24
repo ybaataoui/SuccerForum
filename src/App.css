@@ -1,25 +1,23 @@
 #root {
   width: 110%;
-  /* margin: 0 auto; */
-  /* padding: 2rem; */
+  margin: 0 auto;
+  padding: 2rem;
   text-align: center;
-  background-color: rgb(238, 244, 244);
+  background-color: #EEEEEE;
 }
 
 /* d-flex justify-content-between  justify content based on the div width*/
 
 .navbar{
-  width: 110%;
+  width: 100%;
   position: relative;
   text-align: center;
-  background: #e3f2fd;
-  color: white;
+  background: #3A98B9;
+  color: #FEFAE0;
   font-size: 20px;
   margin-top: 10px;
   margin-bottom: 60px;
 }
-
-
 
 .card {
   display: flex;
@@ -90,16 +88,14 @@
   
 }
 .search {
-  width: 250px !important;
-  border-radius: 15px !important;
-  
-  
+  width: 200px !important;
+  border-radius: 15px !important; 
+  margin-right: 20px; 
 }
 
 .btn{
   width: 150px;
 }
-
 .orderspace{
   margin-right: 10px;
 }
