@@ -19,11 +19,12 @@ const Card = (props) => {
     
     //console.log(datePosted())
     return (
-        <div className="card">
-            <p>Posted {datePosted()} hours ago</p>
-            <h2 className="title">{props.title}</h2>
-            <p>upvotes</p>
-
+        <div className="container-fluid">
+            <div className="card">
+                <p>Posted {datePosted()} hours ago</p>
+                <h2 className="title">{props.title}</h2>
+                <p>{props.upvote} upvotes</p>
+            </div>
         </div>
     )
 }

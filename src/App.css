@@ -6,6 +6,8 @@
   background-color: rgb(238, 244, 244);
 }
 
+/* d-flex justify-content-between  justify content based on the div width*/
+
 .navbar{
   width: 110%;
   position: relative;
@@ -17,15 +19,7 @@
   margin-bottom: 60px;
 }
 
-.search {
-  width: 350px !important;
-  border-radius: 15px !important;
 
-}
-
-.btn{
-  width: 150px;
-}
 
 .card {
   display: flex;
@@ -52,22 +46,66 @@
 }
 .upVote {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
+  justify-content: space-between; 
+}
+
+.comments{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  min-width: 80%;
+  background-color:#e2e3e5;
+  
+}
+
+.betButton:hover {
+  cursor: pointer;
 }
 .action {
   display: flex;
   flex-direction: row;
   position: absolute;
-  bottom: 0;
   right: 0;
   padding-right: 10px;
   padding-bottom: 10px;
+ 
 }
 
 .trash:hover {
   color: red;
   cursor: pointer;
 
+}
+
+.btn {
+  margin-right: 10px;
+}
+
+.order{
+  display: flex;
+  margin-bottom: 20px;
+  align-items: flex-start;
+  
+}
+.search {
+  width: 250px !important;
+  border-radius: 15px !important;
+  
+  
+}
+
+.btn{
+  width: 150px;
+}
+
+.orderspace{
+  margin-right: 10px;
+}
+
+.btn-info {
+  width: 120px;
 }
 
 

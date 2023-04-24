@@ -16,3 +16,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 // npm install recharts
 // npm install react-router-dom
 // npm install  react-bootstrap bootstrap
+//npm install react-icons --save
+//npm install @supabase/supabase-js
