@@ -64,7 +64,7 @@ const EditPost = ({data}) => {
                     <input  className="form-control" type="text" placeholder="Title" id="title" 
                         defaultValue={currentPost.title} onChange={handleChange}/>
                     <textarea className="form-control" type="textarea" placeholder="Content" rows={7} id="content" 
-                        value={currentPost.content} onChange={handleChange}/>
+                        defaultValue={currentPost.content} onChange={handleChange}/>
                     <input  className="form-control" type="text" placeholder="Image URL(Optional" id="image" 
                         defaultValue={currentPost.imageURL} onChange={handleChange}/>
                     <div>
