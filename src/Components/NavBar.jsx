@@ -9,7 +9,8 @@ const NavBar = () => {
                 
                 <div>
                     <Link to="/" style={{ color: 'inherit', textDecoration: 'inherit'}}> Home </Link>&nbsp;&nbsp;
-                    <Link to="/new" style={{ color: 'inherit', textDecoration: 'inherit'}}> Create New Post </Link>
+                    <Link to="/new" style={{ color: 'inherit', textDecoration: 'inherit'}}> Create New Post </Link>&nbsp;&nbsp;
+                    <Link to="/login" style={{ color: 'inherit', textDecoration: 'inherit'}}> Sign In </Link>
                 </div>
             </div>
         </nav>     

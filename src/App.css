@@ -4,6 +4,8 @@
   padding: 2rem;
   text-align: center;
   background-color: #EEEEEE;
+  place-content: center;
+  place-items: center;
 }
 
 /* d-flex justify-content-between  justify content based on the div width*/
@@ -33,7 +35,6 @@
   max-width: 80%;
   height: auto;
   margin-bottom: 20px;
-
 }
 .actionUpvote{
   display: flex;
@@ -95,6 +96,7 @@
 
 .btn{
   width: 150px;
+  margin-bottom: 10px;
 }
 .orderspace{
   margin-right: 10px;
@@ -102,6 +104,14 @@
 
 .btn-info {
   width: 120px;
+}
+
+.loginForm{
+  display: flex;
+  width: 50%;  
+}
+.form-label {
+  float: left;
 }
 
 

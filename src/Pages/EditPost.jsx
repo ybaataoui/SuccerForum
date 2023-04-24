@@ -58,7 +58,7 @@ const EditPost = ({data}) => {
     }
 
     return (
-        <div className="conatiner-fluid" >
+        <div className="container-fluid" >
             <form action="">
                 <div className="d-grid gap-3 mx-auto" style={{width: "700px"}}> 
                     <input  className="form-control" type="text" placeholder="Title" id="title" 

@@ -11,6 +11,8 @@ import NavBar from './Components/NavBar'
 import ReadPosts from './Pages/ReadPosts'
 import PostDetails from './Components/PostDetails'
 import EditPost from './Pages/EditPost'
+import Login from './Pages/Login'
+import CreateUser from './Pages/CreateUser'
 import { supabase } from './client'
 
 function App() {
@@ -48,6 +50,14 @@ function App() {
     {
       path:"/new",
       element: <CreatePost />
+    },
+    {
+      path:"/login",
+      element: <Login />
+    },
+    {
+      path:"/signup",
+      element: <CreateUser />
     }
   ]);
 

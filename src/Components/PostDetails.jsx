@@ -142,7 +142,7 @@ const PostDetails = ({data}) => {
                     posts && posts.length > 0 ?
                         posts.map((post) =>
                             <ul className="list-group list-group-flush baground" key={post.id}>
-                                <li className="list-group-item list-group-item-secondary" key={post.id}>- {post}</li>
+                                <li className="list-group-item list-group-item-secondary list-group-item-action" key={post.id}> {post}</li>
                             </ul>
                         ) : <h2></h2>
                 }
