@@ -8,7 +8,7 @@ const CreateUser = () => {
         fullName: '', email:'', password:''
     })
 
-    const handleChange = (event) => {
+    function handleChange(event) {
         setFormData((prevFormData) => {
             return {
                 ...prevFormData,
@@ -18,25 +18,27 @@ const CreateUser = () => {
     }
     console.log(formData)
 
-    const handleSubmit = async (e) => {  
+     async function handleSubmit (e) {  
         e.preventDefault();
         try {
-            const { data, error } = await supabase.auth.signUp(
-                {
+            const { data, error } = await supabase.auth.signUp({
                 email: formData.email,
                 password: formData.password,
                 options: {
                     data: {
-                    first_name: formData.fullName,
+                        full_name: formData.fullName,
                     }
                 }
                 }
             )
 
             alert('Check your email for verification link!')
+            alert('Your account is created successfully!')
         } catch (error) {
            alert(error) 
         }
+
+        window.location = '/login';
   
     }
     
@@ -44,19 +46,19 @@ const CreateUser = () => {
     return (
         <div className="card loginForm">
             <form onSubmit={handleSubmit}>
-                <div class="mb-3">
+                <div className="mb-3">
                     <label for="fullName" class="form-label">Full Name</label>
-                    <input type="text" class="form-control" id="fullName" onChange={handleChange}/>
+                    <input type="text" className="form-control" name="fullName" onChange={handleChange}/>
                 </div>
                 <div class="mb-3">
-                    <label for="email" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="email" onChange={handleChange}/>
+                    <label for="email" className="form-label">Email address</label>
+                    <input type="email" className="form-control" name="email" onChange={handleChange}/>
                 </div>
                 <div class="mb-3">
-                    <label for="Password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" onChange={handleChange}/>
+                    <label for="Password" className="form-label">Password</label>
+                    <input type="password" className="form-control" name="password" onChange={handleChange}/>
                 </div>
-                <button type="submit" class="btn btn-primary">Create</button>    
+                <button type="submit" className="btn btn-primary">Create</button>    
             </form>  
         </div> 
     )
