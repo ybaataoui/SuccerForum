@@ -41,9 +41,9 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='<blockquote class="imgur-embed-pub" lang="en" data-id="a/8BkR5sQ" data-context="false" ><a href="//imgur.com/a/8BkR5sQ.gif"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-<img src='http://i.imgur.com/a/8BkR5sQ.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![SuccerForum](https://user-images.githubusercontent.com/80371588/234163760-8ca0f70c-f491-4a67-b93b-2ced94e0d484.gif)
+
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
