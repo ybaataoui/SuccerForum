@@ -1,43 +1,75 @@
 import { useEffect, useState } from 'react'
 import { useRoutes, Link } from 'react-router-dom'
-
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import CreatePost from './Pages/CreatePost'
+import {Login, SignUp, ReadPosts, CreatePost, EditPost} from './Pages'
 import NavBar from './Components/NavBar'
-import ReadPosts from './Pages/ReadPosts'
 import PostDetails from './Components/PostDetails'
-import EditPost from './Pages/EditPost'
-import Login from './Pages/Login'
-import CreateUser from './Pages/CreateUser'
 import { supabase } from './client'
 
 function App() {
   
   const [posts, setPosts] = useState([]);
+  const [token, setToken] = useState(false)
 
+  if(token) {
+    sessionStorage.setItem('token', JSON.stringify(token))
+  }
   //console.log(posts)
-  useEffect(() => {
-    const fetchPost = async () => {
-      const {data} = await supabase
-        .from('ForumPosts')
-        .select()
-        .order('created_at', { ascending: true})
+  // useEffect(() => {
+  //   if(sessionStorage.getItem('token')){
+  //     let data = JSON.parse(sessionStorage.getItem('token'))
+  //     setToken(data)
+  //   }
+  //   const fetchPost = async () => {
+  //     const {data} = await supabase
+  //       .from('ForumPosts')
+  //       .select()
+  //       .order('created_at', { ascending: true})
 
-        setPosts(data);
+  //       setPosts(data);
+  //   }
+  //   fetchPost().catch(console.error)
+  // }, [])
+  useEffect(() => {
+    let isMounted = true; // add a mounted flag to prevent state updates when component is unmounted
+  
+    if (sessionStorage.getItem('token')) {
+      let data = JSON.parse(sessionStorage.getItem('token'))
+      setToken(data)
     }
-    fetchPost().catch(console.error)
-  })
+  
+    const fetchPost = async () => {
+      try {
+        const { data } = await supabase
+          .from('ForumPosts')
+          .select()
+          .order('created_at', { ascending: true })
+  
+        if (isMounted) {
+          setPosts(data);
+        }
+      } catch (error) {
+        console.error(error);
+        // handle error, e.g. show error message to user
+      }
+    };
+  
+    fetchPost();
+  
+    return () => {
+      isMounted = false; // set flag to false when component unmounts
+    };
+  }, []);
+  
 
 
   // Sets up routes
   let element = useRoutes([
     {
-      path: "/",
-      element:<ReadPosts data={posts}/>
+      path: "/home",
+      element: token ? <ReadPosts data={posts} token={token}/> : null
     },
     {
       path: "/PostDetails/:id",
@@ -52,12 +84,12 @@ function App() {
       element: <CreatePost />
     },
     {
-      path:"/login",
-      element: <Login />
+      path:"/",
+      element: <Login setToken={setToken}/>
     },
     {
       path:"/signup",
-      element: <CreateUser />
+      element: <SignUp />
     }
   ]);
 

@@ -114,6 +114,12 @@
   float: left;
 }
 
+.welcome{
+  display: flex;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
 
 
 

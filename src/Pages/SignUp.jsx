@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { supabase } from "../client";
 
-const CreateUser = () => {
+const SignUp = () => {
 
     const [formData, setFormData] = useState({
         fullName: '', email:'', password:''
@@ -46,20 +46,23 @@ const CreateUser = () => {
             <form onSubmit={handleSubmit}>
                 <div class="mb-3">
                     <label for="fullName" class="form-label">Full Name</label>
-                    <input type="text" class="form-control" id="fullName" onChange={handleChange}/>
+                    <input type="text" class="form-control" name="fullName" onChange={handleChange}/>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="email" onChange={handleChange}/>
+                    <input type="email" class="form-control" name="email" onChange={handleChange}/>
                 </div>
                 <div class="mb-3">
                     <label for="Password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" onChange={handleChange}/>
+                    <input type="password" class="form-control" name="password" onChange={handleChange}/>
                 </div>
                 <button type="submit" class="btn btn-primary">Create</button>    
+                <div>
+                    <p>Have an account <Link to="/">Login</Link></p>
+                </div>
             </form>  
         </div> 
     )
 }
 
-export default CreateUser;
+export default SignUp;
