@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { supabase } from "../client";
 
-const SignUp = () => {
+const CreateUser = () => {
 
     const [formData, setFormData] = useState({
         fullName: '', email:'', password:''
@@ -44,25 +44,22 @@ const SignUp = () => {
     return (
         <div className="card loginForm">
             <form onSubmit={handleSubmit}>
-                <div class="mb-3">
-                    <label for="fullName" class="form-label">Full Name</label>
-                    <input type="text" class="form-control" name="fullName" onChange={handleChange}/>
+                <div className="mb-3">
+                    <label for="fullName" className="form-label">Full Name</label>
+                    <input type="text" className="form-control" id="fullName" onChange={handleChange}/>
+                </div>
+                <div className="mb-3">
+                    <label for="email" className="form-label">Email address</label>
+                    <input type="email" className="form-control" id="email" onChange={handleChange}/>
                 </div>
                 <div class="mb-3">
-                    <label for="email" class="form-label">Email address</label>
-                    <input type="email" class="form-control" name="email" onChange={handleChange}/>
+                    <label for="Password" className="form-label">Password</label>
+                    <input type="password" className="form-control" id="password" onChange={handleChange}/>
                 </div>
-                <div class="mb-3">
-                    <label for="Password" class="form-label">Password</label>
-                    <input type="password" class="form-control" name="password" onChange={handleChange}/>
-                </div>
-                <button type="submit" class="btn btn-primary">Create</button>    
-                <div>
-                    <p>Have an account <Link to="/">Login</Link></p>
-                </div>
+                <button type="submit" className="btn btn-primary">Create</button>    
             </form>  
         </div> 
     )
 }
 
-export default SignUp;
+export default CreateUser;

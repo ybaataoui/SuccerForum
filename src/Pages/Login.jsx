@@ -41,20 +41,21 @@ const Login = ({setToken}) => {
     
     return (
         <div className="card loginForm">
-            <form onSubmit={handleSubmit}>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email address</label>
-                    <input type="email" class="form-control" name="email" onChange={handleChange}/>
-                </div>
-                <div class="mb-3">
-                    <label for="Password" class="form-label">Password</label>
-                    <input type="password" class="form-control" name="password" onChange={handleChange}/>
-                </div>
-                <button type="submit" class="btn btn-primary">Login</button>    
-                <div>
-                    <p>Don't have an account? <Link to="/signup">Sign Up</Link></p>
-                </div>
-            </form>  
+            <form >
+            <div class="mb-3">
+                <label for="Email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="Email" aria-describedby="emailHelp"/>
+                
+            </div>
+            <div class="mb-3">
+                <label for="Password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="Password" />
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <div>
+                <p>You do not have an account <Link to="/signup">Sign Up</Link></p>
+            </div>
+        </form>  
         </div> 
     )
 }
