@@ -45,6 +45,9 @@ Here's a walkthrough of implemented user stories:
 ![SuccerForum](https://user-images.githubusercontent.com/80371588/234163760-8ca0f70c-f491-4a67-b93b-2ced94e0d484.gif)
 
 
+![SuccerForum](https://user-images.githubusercontent.com/80371588/234443799-f8e89e9f-ded2-4427-a340-e7c9318a75f1.gif)
+
+
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with LICEcap  
 <!-- Recommended tools:
