@@ -43,6 +43,9 @@ Here's a walkthrough of implemented user stories:
 
 <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+![SuccerForum](https://user-images.githubusercontent.com/80371588/234443799-f8e89e9f-ded2-4427-a340-e7c9318a75f1.gif)
+
+
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
 <!-- Recommended tools:
